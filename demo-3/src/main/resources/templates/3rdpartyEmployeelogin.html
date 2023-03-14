@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<style>
+.e{
+color:red;}
+</style>
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>	
+	
+	<!-- Background image -->
+<div class="bg-image" 
+style="background-image: url('imgs/p.jpg');
+        height: 100vh">
+        
+
+<h1 style="text-align:center">Please Enter Service Employee Details</h1>
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+<br>
+<form action="/3pemployeeregistationform" th:object="${employee3P}" method="POST">
+	<ul class="e">
+  		<li th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+	</ul>
+	
+	<div class="form-group mb-3">
+		<label>Employee_id:</label>
+		<input type="text"  th:field=*{employee_id} class="form-control" name="employee_id">
+	</div>	
+	<div class="form-group mb-3">	
+		<label>Employee Name:</label>
+		<input type="text"  th:field=*{e_name} class="form-control" name="e_name">		
+	</div>
+	<div class="form-group mb-3">	
+		<label>Assigned Manager id:</label>
+		<input type="text"  th:field=*{manager_id} class="form-control" name="manager_id">		
+	</div>
+	<div class="form-group mb-3">	
+		<label>3rd-Party Company Name:</label>
+		<input type="text"  th:field=*{company_name} class="form-control" name="company_name">		
+	</div>
+	<div class="form-group mb-3">	
+		<label>Role:</label>
+		<input type="text"  th:field=*{role} class="form-control" name="role">		
+	</div>
+	<div class="form-group mb-3">	
+		<label>Location:</label>
+		<input type="text"  th:field=*{location} class="form-control" name="location">		
+	</div>
+	<div>
+		<input type="submit"  class="btn btn-primary form-control"/>
+	</div>
+</form>
+</div>	
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

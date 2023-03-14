@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.6.3-web/css/all.css">
+  <!-- Our Custom CSS style sheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>About Us - AT</title>
+</head>
+<!-- xs<576 | 576<sm<768 | 768<md<992 | 992<lg<1200 | 1200<xl -->
+
+<body>
+
+
+  <header th:fragment="header">
+    <div class="p-1" id="topHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-right">
+            <a class="p-1" th:href="@{/flights}"> <i class="fas fa-phone"></i> +(91) 9090909090 </a>
+            <a class="p-1" th:href="@{/flights}">  <i class="fas fa-envelope"></i> aerodomeinfo@gmail.com </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottomHeader">
+      <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-md" style="background-color:#004d80;">
+            <a class="navbar-brand" th:href="@{/findflights}">
+                <img src="imgs/AERODROMETERMINAL.png" width="250px" alt="">
+              </a>
+        
+          <a class="navbar-brand" href="">
+            <img src="" width="250px" alt="">
+          </a>
+          <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/parkinghome}">Home</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/flights}">flight</a>
+              </li>
+          
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/findflights}">find flight</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/services}">Our Services</a>
+              </li>
+<!-- 
+              <li class="nav-item dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Service			</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" th:href="@{/findflights}">Find flight</a>
+                  <a class="dropdown-item" th:href="@{/parkinghome}">Parking Home</a>
+                  
+                  <div class="dropdown-divider"></div>
+                </div>
+
+              </li> -->
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+  </header>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

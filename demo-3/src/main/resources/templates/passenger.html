@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<div th:replace="fragments/header :: header"></div>	
+
+<!-- Background image -->
+<div class="bg-image" 
+style="background-image: url('imgs/g.jpg');
+        height: 80vh">
+        
+<a href="@{/findflights}">Find Flights</a>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

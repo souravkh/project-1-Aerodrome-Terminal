@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>3rd part employee details </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>	
+
+
+
+<!-- Background image -->
+<div class="bg-image" 
+style="background-image: url('imgs/f.jpg');
+        height: 100vh">
+	
+	
+	
+<h1> 3rd party Employee details :</h1>
+<br>
+<table class="table table-striped">
+<thead >
+<tr class="table-primary">
+<td>Employee Name</td>
+<td>Employee id</td>
+<td> Assigned Manager</td>
+<td> Role</td>
+<td> Location</td>
+<td> Company Name</td>
+</tr>
+</thead>
+<tr th:each="employee: ${emplist3}"> 
+<td>[[${employee.e_name }]]</td>
+<td>[[${employee.employee_id }]]</td>
+<td>[[${employee.manager_id }]]</td>
+<td>[[${employee.role }]]</td>
+<td>[[${employee.location }]]</td>
+<td>[[${employee.company_name }]]</td>
+<td>
+ <a th:href="@{'/delete3pemployee/'+ ${employee.employee_id}}"> delete</a><br>
+</td>              
+</tr>
+</table>
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>
